@@ -1,0 +1,10 @@
+{% block subject %}
+【銭湯ログ】メールアドレス変更
+{% endblock subject %}
+
+{% block text_body %}
+{{ name }}様
+
+以下のリンクからメールアドレスの変更を行ってください。
+{{ protocol }}://{{ domain }}/{{ url|safe }}
+{% endblock text_body %}

@@ -1,0 +1,10 @@
+{% block subject %}
+【銭湯ログ】本会員登録の案内
+{% endblock subject %}
+
+{% block text_body %}
+{{ name }}様
+
+以下のリンクから本会員登録を完了してください。
+{{ protocol }}://{{ domain }}/{{ url|safe }}
+{% endblock text_body %}
