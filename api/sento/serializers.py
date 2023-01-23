@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from .models import Area, Sento
+import accounts.serializers
+from .models import Area, Sento, UserSentoVisit
 
 
 class AreaSerializer(serializers.ModelSerializer):
@@ -14,4 +15,13 @@ class SentoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sento
+        fields = '__all__'
+
+
+class UserSentoVisitSerializer(serializers.ModelSerializer):
+    sento = SentoSerializer()
+    user = accounts.serializers.UserSerializer()
+
+    class Meta:
+        model = UserSentoVisit
         fields = '__all__'

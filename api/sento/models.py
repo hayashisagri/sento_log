@@ -1,5 +1,7 @@
 from django.contrib.gis.db import models
 
+from accounts.models import UserAccount
+
 
 class Area(models.Model):
     name = models.CharField(max_length=255)
@@ -38,3 +40,10 @@ class Sento(models.Model):
         verbose_name = '銭湯'
 
 
+class UserSentoVisit(models.Model):
+    user = models.ForeignKey(UserAccount, verbose_name='ユーザー', on_delete=models.CASCADE)
+    sento = models.ForeignKey(Sento, verbose_name='銭湯', on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'user_sento_visits'
+        verbose_name = '銭湯訪問履歴'
