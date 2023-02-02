@@ -4,7 +4,7 @@
 ### 言語
 - python 3.10.8
 - typescript 4.9.4
-- javascript ES7
+- javascript ES2022
 
 ### フレームワーク, 主なライブラリ
 backend
