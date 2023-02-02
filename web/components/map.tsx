@@ -52,7 +52,7 @@ const Map = (props) => {
           ]}
         >
           <Popup>
-            <h4>{sento.name}</h4>
+            <h2>{sento.name}</h2>
             <dl>
               <Visit
                 userId={props.userId}

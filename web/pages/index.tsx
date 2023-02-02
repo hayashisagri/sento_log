@@ -67,10 +67,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         {name === '' ? (
-          <>
+          <div>
             <Login/>
             <Signup />
-          </>
+          </div>
         ) : (
           <Logout name={name} />
         )}

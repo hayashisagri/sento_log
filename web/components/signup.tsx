@@ -49,7 +49,7 @@ export const Signup = () => {
   };
 
   return (
-    <>
+    <div style={{marginBottom: '20px', display: 'inline-block', textAlign: 'right', width: '250px'}}>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
           <Form.Label>名前</Form.Label>
@@ -92,11 +92,12 @@ export const Signup = () => {
           type="submit"
           disabled={!validateForm()}
           onClick={onClickSignup}
+          style={{marginTop: '5px'}}
         >
           会員登録
         </Button>
       </Form>
       <div>{message}</div>
-    </>
+    </div>
   );
 };

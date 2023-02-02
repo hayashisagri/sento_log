@@ -35,8 +35,8 @@ export const Login = () => {
   };
 
   return (
-    <>
-      <div>ログインしてください</div>
+    <div style={{marginBottom: '20px', display: 'inline-block', textAlign: 'right', width: '250px'}}>
+      <h2 style={{textAlign: 'center', display: 'inline-flex'}}>ログインしてください</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="email">
           <Form.Label>Email</Form.Label>
@@ -61,10 +61,11 @@ export const Login = () => {
           type="submit"
           disabled={!validateForm()}
           onClick={onClickLogin}
+          style={{marginTop: '5px'}}
         >
           Login
         </Button>
       </Form>
-    </>
+    </div>
   );
 };

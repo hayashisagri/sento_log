@@ -58,14 +58,20 @@ export const Visit = (props) => {
   return (
     <>
       {visit ? (
-        <button onClick={onClickDeleteVisit}>訪問済み</button>
+        <div style={{marginBottom: '10px'}}>
+          <h5 style={{color: 'darkred'}}>訪問済み</h5>
+          <button onClick={onClickDeleteVisit}>訪問取り消し</button>
+        </div>
       ) : (
-        <button
-          disabled={!isAuthenticatedAndVisited(user)}
-          onClick={onClickPostVisit}
-        >
-          未訪問
-        </button>
+        <div style={{marginBottom: '10px'}}>
+          <h5 style={{color: 'blue'}}>未訪問</h5>
+          <button
+            disabled={!isAuthenticatedAndVisited(user)}
+            onClick={onClickPostVisit}
+          >
+            訪問済みに変更！
+          </button>
+        </div>
       )}
     </>
   );
