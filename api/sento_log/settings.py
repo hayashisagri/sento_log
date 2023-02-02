@@ -44,9 +44,11 @@ INSTALLED_APPS = [
     'djoser',
     'accounts',
     'sento',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -145,7 +147,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
     'AUTH_HEADER_TYPES': ('JWT', ),
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken', ),
@@ -184,3 +186,7 @@ AUTH_USER_MODEL = 'accounts.UserAccount'
 
 # ローカル確認用
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
