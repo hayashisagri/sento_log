@@ -57,45 +57,6 @@ export default function Home() {
     }
   }
 
-  // useEffect(() => {
-  //   try {
-  //     axios.get('http://localhost:8000/api/auth/users/me/', {
-  //       headers: {
-  //         Authorization: `JWT ${localStorage.getItem('access')}`
-  //       }
-  //     })
-  //       .then((res) => {
-  //         setUserId(res.data.id)
-  //         setName(res.data.name)
-  //       })
-  //       .catch((err) => {
-  //       setName('')
-  //     })
-  //   } catch (err) {
-  //     setName('')
-  //   }
-  // }, [name])
-  //
-  //
-  // useEffect(() => {
-  //   try {
-  //     axios.get('http://localhost:8000/api/v1/sento/visits/', {
-  //       headers: {
-  //         Authorization: `JWT ${localStorage.getItem('access')}`
-  //       }
-  //     })
-  //       .then((res) => {
-  //         console.log('========', res.data.sento.id)
-  //       })
-  //       .catch((err) => {
-  //         setName('')
-  //       })
-  //   } catch (err) {
-  //     setName('')
-  //   }
-  // }, [userId])
-
-
   return (
     <>
       <Head>
